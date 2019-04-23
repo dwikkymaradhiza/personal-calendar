@@ -1,8 +1,24 @@
-## Simple Inbox API
+# Personal Calendar API
+Personal Calendar API.
 
-1. Run "npm install".
-2. Copy config.template.json to config.json and fill with your local configuration.
-3. To run the application, run "node app.js".
-4. For documentation, go to http://localhost:3000/docs (depends on your configuration).
-5. For realtime get inbox message, go to http://localhost:3000 (depends on your configuration) and try to hit api send inbox.
+## Installation
+
+Use the package manager [npm](https://www.npmjs.com/) to install dependencies. And then run this command:
+
+```bash
+npm install
+```
+
+## Run in local
+
+1. Copy config.template.json to config.json and fill with your local configuration.
+2. Run the application with this command:
+```bash
+npm start
+```
+3. For documentation, go to http://localhost:3000/docs (username & password depends on your configuration).
+4. For unit test, run this command:
+```bash
+npm run test
+```
 
