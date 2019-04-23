@@ -7,6 +7,12 @@
   "DB_USER": "__DB_USER__",
   "DB_PASS": "__DB_PASS__",
 
+  "LOG_DIR": "logs",
+  "BCRYPT_HASH_ROUND": 10,
+
+  "JWT_SECRET": "secret#2019",
+  "JWT_EXPIRED": 3600,
+
   "DOCS_VERSION": "1.0.0",
   "DOCS_TITLE": "Personal Calendar API Documentation",
   "DOCS_USER": "dev",
