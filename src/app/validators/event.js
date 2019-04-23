@@ -1,11 +1,14 @@
 const joi = require('joi');
-const { httpStatus, errorCodes, messages } = require('../configs/constants');
+const { httpStatus, errorCodes, messages } = require('../../configs/constants');
 
 module.exports = {
-  login: () => {
+  create: () => {
     const schema = {
-      username: joi.required(),
-      password: joi.required()
+      name: joi.required(),
+      start_datetime: joi.required(),
+      end_datetime: joi.required(),
+      users_in_the_event: joi.array().required(),
+      location: joi.array().optional()
     };
 
     return async (req, res, next) => {
@@ -23,33 +26,13 @@ module.exports = {
     };
   },
 
-  register: () => {
+  update: () => {
     const schema = {
-      username: joi.required(),
-      password: joi.required(),
-      first_name: joi.required(),
-      last_name: joi.required(),
-      email: joi.required(),
-    };
-
-    return async (req, res, next) => {
-      try {
-        const { body } = req;
-        await joi.validate(body, schema);
-        next();
-      } catch (err) {
-        res.response(httpStatus.badRequest, {
-          message: messages.message,
-          error_code: errorCodes.badRequest,
-          error: err.details
-        });
-      }
-    };
-  },
-
-  refresh: () => {
-    const schema = {
-      refresh_token: joi.required(),
+      name: joi.required(),
+      start_datetime: joi.required(),
+      end_datetime: joi.required(),
+      users_in_the_event: joi.array().required(),
+      location: joi.array().optional()
     };
 
     return async (req, res, next) => {

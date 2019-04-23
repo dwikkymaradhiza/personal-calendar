@@ -2,7 +2,7 @@ const passport = require('passport');
 const passportJWT = require('passport-jwt');
 const config = require('../../config');
 const { httpStatus, errorCodes, messages } = require('../configs/constants');
-const userService = require('../services/user');
+const userService = require('../app/services/user');
 
 const { ExtractJwt, Strategy } = passportJWT;
 const jwtOptions = {
@@ -30,13 +30,20 @@ passport.use(strategy);
 
 module.exports = {
   authenticate: (req, res, next) => passport.authenticate('jwt', { session: false }, (error, user, info) => {
+    if (!req.headers.authorization) {
+      return res.response(httpStatus.unauthorized, {
+        message: messages.missingAuthToken,
+        error_code: errorCodes.missingAuthToken
+      });
+    }
+
     // Error exist
     if (info) {
       // Return custom error token expired
       if (info.name === 'TokenExpiredError') {
         return res.response(httpStatus.unauthorized, {
           message: messages.expiredAuthToken,
-          code: errorCodes.expiredAuthToken
+          error_code: errorCodes.expiredAuthToken
         });
       }
 

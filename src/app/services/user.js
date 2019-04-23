@@ -1,5 +1,5 @@
 
-const { User } = require('./../configs/database');
+const { User } = require('./../../configs/database');
 
 module.exports = {
   /**

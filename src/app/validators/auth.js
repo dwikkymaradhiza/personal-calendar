@@ -1,14 +1,11 @@
 const joi = require('joi');
-const { httpStatus, errorCodes, messages } = require('../configs/constants');
+const { httpStatus, errorCodes, messages } = require('../../configs/constants');
 
 module.exports = {
-  create: () => {
+  login: () => {
     const schema = {
-      name: joi.required(),
-      start_datetime: joi.required(),
-      end_datetime: joi.required(),
-      users_in_the_event: joi.array().required(),
-      location: joi.array().optional()
+      username: joi.required(),
+      password: joi.required()
     };
 
     return async (req, res, next) => {
@@ -26,13 +23,13 @@ module.exports = {
     };
   },
 
-  update: () => {
+  register: () => {
     const schema = {
-      name: joi.required(),
-      start_datetime: joi.required(),
-      end_datetime: joi.required(),
-      users_in_the_event: joi.array().required(),
-      location: joi.array().optional()
+      username: joi.required(),
+      password: joi.required(),
+      first_name: joi.required(),
+      last_name: joi.required(),
+      email: joi.required(),
     };
 
     return async (req, res, next) => {

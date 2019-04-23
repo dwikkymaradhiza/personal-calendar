@@ -14,16 +14,13 @@
  *          schema:
  *            type: object
  *            properties:
- *              subscriber_id:
- *                type: integer
- *              dichotomy_id:
+ *              username:
  *                type: string
- *              group_id:
+ *              password:
  *                type: string
  *            example:
- *              subscriber_id: 5006303
- *              dichotomy_id: 5b88ea6964989d3e39b8a6ed
- *              group_id: 5b890c29629d5c57791361ce
+ *              username: rizkydestrio
+ *              password: admin123
  *     responses:
  *       200:
  *         description: success
@@ -46,48 +43,22 @@
  *          schema:
  *            type: object
  *            properties:
- *              subscriber_id:
- *                type: integer
- *              dichotomy_id:
+ *              username:
  *                type: string
- *              group_id:
+ *              password:
  *                type: string
- *            example:
- *              subscriber_id: 5006303
- *              dichotomy_id: 5b88ea6964989d3e39b8a6ed
- *              group_id: 5b890c29629d5c57791361ce
- *     responses:
- *       200:
- *         description: success
- *       401:
- *         description: unauthorized
- *       500:
- *         description: internal server error
- *
- * /auth/refresh:
- *   post:
- *     summary: Refresh Token
- *     tags:
- *      - Auth
- *     produces:
- *        application/json
- *     parameters:
- *        - in: body
- *          name: body
- *          description: Parameter that needs to be added to the api
- *          schema:
- *            type: object
- *            properties:
- *              subscriber_id:
- *                type: integer
- *              dichotomy_id:
+ *              email:
  *                type: string
- *              group_id:
+ *              first_name:
+ *                type: string
+ *              last_name:
  *                type: string
  *            example:
- *              subscriber_id: 5006303
- *              dichotomy_id: 5b88ea6964989d3e39b8a6ed
- *              group_id: 5b890c29629d5c57791361ce
+ *              username: dwikkymaradhiza
+ *              password: admin123
+ *              email: dwikkymaradhiza@gmail.com
+ *              first_name: Dwikky
+ *              last_name: Maradhiza
  *     responses:
  *       200:
  *         description: success

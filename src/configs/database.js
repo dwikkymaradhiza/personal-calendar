@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 const config = require('./../../config');
-const models = require('./../models');
+const models = require('./../app/models');
 
 // Build the connection string
 let dbURI = null;

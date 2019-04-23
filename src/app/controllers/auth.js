@@ -2,9 +2,9 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const userService = require('./../services/user');
-const logger = require('../libs/logger');
-const config = require('../../config');
-const { httpStatus, messages, errorCodes } = require('./../configs/constants');
+const logger = require('../../libs/logger');
+const config = require('../../../config');
+const { httpStatus, messages, errorCodes } = require('./../../configs/constants');
 
 module.exports = {
   /**
@@ -100,11 +100,4 @@ module.exports = {
       });
     }
   },
-
-  /**
-   * Refresh Token
-   */
-  refresh: async (req, res) => {
-
-  }
 };

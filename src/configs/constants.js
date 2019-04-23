@@ -14,6 +14,8 @@ module.exports = {
     invalidUserPassword: '0004',
     expiredAuthToken: '0005',
     invalidAuthToken: '0006',
+    forbiddenAccess: '0007',
+    missingAuthToken: '0008',
   },
   messages: {
     ok: 'OK',
@@ -21,6 +23,8 @@ module.exports = {
     notFound: 'Not Found',
     invalidUserPassword: 'Invalid User/Password',
     expiredAuthToken: 'Token Expired',
-    invalidAuthToken: 'Invalid Token'
+    invalidAuthToken: 'Invalid Token',
+    forbiddenAccess: 'Forbidden Access',
+    missingAuthToken: 'Missing Auth Token'
   }
 };

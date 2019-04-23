@@ -38,16 +38,22 @@
  *          schema:
  *            type: object
  *            properties:
- *              subscriber_id:
- *                type: integer
- *              dichotomy_id:
+ *              name:
  *                type: string
- *              group_id:
- *                type: string
+ *              users_in_the_event:
+ *                type: array
+ *              start_datetime:
+ *                type: date
+ *              end_datetime:
+ *                type: date
+ *              location:
+ *                type: array
  *            example:
- *              subscriber_id: 5006303
- *              dichotomy_id: 5b88ea6964989d3e39b8a6ed
- *              group_id: 5b890c29629d5c57791361ce
+ *              name: Birthday Party
+ *              users_in_the_event: ["123123123"]
+ *              start_datetime: 2019-05-04 08:00:00
+ *              end_datetime: 2019-05-04 12:00:00
+ *              location: [108.212121, 6.7212121]
  *     responses:
  *       200:
  *         description: success
@@ -100,16 +106,22 @@
  *          schema:
  *            type: object
  *            properties:
- *              subscriber_id:
- *                type: integer
- *              dichotomy_id:
+ *              name:
  *                type: string
- *              group_id:
- *                type: string
+ *              users_in_the_event:
+ *                type: array
+ *              start_datetime:
+ *                type: date
+ *              end_datetime:
+ *                type: date
+ *              location:
+ *                type: array
  *            example:
- *              subscriber_id: 5006303
- *              dichotomy_id: 5b88ea6964989d3e39b8a6ed
- *              group_id: 5b890c29629d5c57791361ce
+ *              name: Birthday Party
+ *              users_in_the_event: ["123123123"]
+ *              start_datetime: 2019-05-04 08:00:00
+ *              end_datetime: 2019-05-04 12:00:00
+ *              location: [108.212121, 6.7212121]
  *     responses:
  *       200:
  *         description: success

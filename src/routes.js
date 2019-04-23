@@ -4,12 +4,12 @@ const passport = require('./middlewares/passport_jwt');
 const router = express.Router();
 
 // Controllers
-const authController = require('../src/controllers/auth');
-const eventController = require('../src/controllers/event');
+const authController = require('../src/app/controllers/auth');
+const eventController = require('../src/app/controllers/event');
 
 // Validators
-const authValidator = require('../src/validators/auth');
-const eventValidator = require('../src/validators/event');
+const authValidator = require('../src/app/validators/auth');
+const eventValidator = require('../src/app/validators/event');
 
 //---------------------------
 //        Route List        |
@@ -18,7 +18,6 @@ const eventValidator = require('../src/validators/event');
 // Auth
 router.post('/auth/login', authValidator.login(), authController.login);
 router.post('/auth/register', authValidator.register(), authController.register);
-router.post('/auth/refresh', authValidator.refresh(), authController.refresh);
 
 // Event
 router.use('/events', passport.authenticate);
